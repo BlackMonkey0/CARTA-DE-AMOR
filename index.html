@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Te Amo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="FOTOS-CRIS/ICONO.JPG" type="image/png" />
+
+</head>
+<body>
+  <div class="container">
+    <h1>Carta para ti 💌</h1>
+
+    <p>Hoy estamos compartiendo una cena más, otro momento más de tantos que hemos vivido.<br>
+    Pero mientras tú piensas que esto es un instante como cualquier otro, yo estoy aquí, temblando por dentro…<br>
+    porque hoy quiero darte algo más que palabras, más que gestos, más que abrazos.</p>
+
+    <p>Desde el día en que apareciste en mi vida, todo cambió.<br>
+    No fue solo que alguien especial cruzó mi camino; fuiste tú,<br>
+    con esa forma única de mirar, de hablar, de reír,<br>
+    de calmarme incluso en medio de mis tormentas.</p>
+
+    <p>Hay fotos nuestras que no se pueden imprimir, porque están hechas de recuerdos...</p>
+
+    <div class="photo-section">
+  <h2>📸 ¿Qué día empezó todo?</h2>
+  <input type="text" placeholder="Escribe la palabra clave..." id="clave1" />
+  <button onclick="mostrarFoto('clave1', 'foto_antes_de_cenar', '06-04')">Desbloquear</button>
+  
+  <div id="foto_antes_de_cenar" class="foto-oculta">
+    <img src="FOTOS-CRIS/foto_antes_de_cenar.jpg" alt="Nervios antes de cenar" class="poem-photo" />
+    <p class="photo-description">Un día que marcó el comienzo de una historia de amor.</p>
+  </div>
+</div>
+
+
+    <p>Cada gesto tuyo es un refugio, cada palabra una melodía que calma y eleva.<br>
+    A veces me pregunto cómo fue que la vida me permitió cruzarme contigo…<br>
+    y me doy cuenta de que simplemente yo nací para encontrarte.</p>
+
+    <p>Te he visto sonreír cuando todo pesaba.<br>
+    Te he visto amar incluso cuando la distancia dolía.<br>
+    Te he sentido cerca, incluso en días grises.<br>
+    Y en medio de todos esos días, comprendí que no quiero un futuro donde no estés tú.</p>
+
+    <p>Mi amor, quiero compartir cada amanecer, cada locura, cada paso que nos quede.<br>
+    Quiero construir una vida contigo, a tu lado, sin pausas, sin condiciones.</p>
+
+    <p>Por eso esta noche, mientras suena una canción que nos representa,<br>
+    quiero hacerte una pregunta sencilla… pero que contiene todo mi corazón.</p>
+
+    <p class="signature">Con todo lo que soy,<br><strong>Luis</strong></p>
+
+
+  <script>
+  function mostrarFoto(inputId, fotoId, claveCorrecta) {
+    const input = document.getElementById(inputId);
+    const contenedor = document.getElementById(fotoId);
+    if (input.value.trim().toLowerCase() === claveCorrecta.toLowerCase()) {
+      contenedor.style.display = "block";
+      input.disabled = true;
+    } else {
+      alert("Palabra incorrecta 💔");
+    }
+  }
+</script>
+</body>
+</html>

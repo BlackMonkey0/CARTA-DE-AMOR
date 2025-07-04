@@ -1,0 +1,167 @@
+/* General */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff0f5; /* lavanda muy suave */
+  color: #4a3f35; /* marrón suave */
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff7f9; /* rosa muy claro */
+  box-shadow: 0 8px 15px rgba(183, 110, 121, 0.15);
+  border-radius: 15px;
+}
+
+/* Títulos */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #b76e79; /* rosa viejo */
+  text-shadow: 1px 1px 3px rgba(183, 110, 121, 0.6);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #914e5a;
+  margin-top: 40px;
+}
+
+/* Firma y pregunta final */
+.question {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #914e5a;
+  margin-top: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.signature {
+  text-align: right;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 40px;
+  color: #7f5a63;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Fotos y desbloqueo */
+.photo-section {
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+  border: 1px dashed #dba0ac;
+  border-radius: 12px;
+  background-color: #fff5f7;
+  box-shadow: inset 0 0 10px #f5d3db;
+}
+
+/* Input texto */
+input[type="text"] {
+  padding: 10px 14px;
+  border: 2px solid #dba0ac;
+  border-radius: 25px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  width: 80%;
+  max-width: 300px;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s ease;
+  box-shadow: inset 2px 2px 5px rgba(255 255 255 / 0.7);
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #b76e79;
+  box-shadow: 0 0 8px #b76e79;
+}
+
+/* Botón */
+button {
+  padding: 10px 15px;
+  background-color: #b76e79;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(183, 110, 121, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #914e5a;
+  box-shadow: 0 6px 14px rgba(145, 78, 90, 0.6);
+}
+
+/* Foto oculta inicialmente */
+.foto-oculta {
+  display: none;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out forwards;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff5f7;
+  box-shadow: 0 8px 15px rgba(183, 110, 121, 0.2);
+  padding: 15px;
+}
+
+.poem-photo {
+  width: 5cm;
+  height: 7.5cm;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(183, 110, 121, 0.4);
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+.poem-photo:hover {
+  transform: scale(1.05);
+}
+
+/* Descripción foto */
+.photo-description {
+  margin-top: 12px;
+  font-style: italic;
+  color: #7f5a63;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .poem-photo {
+    width: 100%;
+    height: auto;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
+}
