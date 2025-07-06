@@ -6,7 +6,6 @@
   <title>Te Amo</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="ICONO.JPG" type="image/png" />
-
 </head>
 <body>
   <div class="container">
@@ -24,16 +23,15 @@
     <p>Hay fotos nuestras que no se pueden imprimir, porque están hechas de recuerdos...</p>
 
     <div class="photo-section">
-  <h2>📸 ¿Qué día empezó todo?</h2>
-  <input type="text" placeholder="Escribe la palabra clave..." id="clave1" />
-  <button onclick="mostrarFoto('clave1', 'foto_antes_de_cenar', '06-04')">Desbloquear</button>
-  
-  <div id="foto_antes_de_cenar" class="foto-oculta">
-    <img src="foto_antes_de_cenar.jpg" alt="Nervios antes de cenar" class="poem-photo" />
-    <p class="photo-description">Un día que marcó el comienzo de una historia de amor.</p>
-  </div>
-</div>
-
+      <h2>📸 ¿Qué día empezó todo?</h2>
+      <input type="text" placeholder="Escribe la palabra clave..." id="clave1" />
+      <button onclick="mostrarFoto('clave1', 'foto_antes_de_cenar', '06-04')">Desbloquear</button>
+      
+      <div id="foto_antes_de_cenar" class="foto-oculta">
+        <img src="foto_antes_de_cenar.jpg" alt="Nervios antes de cenar" class="poem-photo" />
+        <p class="photo-description">Un día que marcó el comienzo de una historia de amor.</p>
+      </div>
+    </div>
 
     <p>Cada gesto tuyo es un refugio, cada palabra una melodía que calma y eleva.<br>
     A veces me pregunto cómo fue que la vida me permitió cruzarme contigo…<br>
@@ -52,18 +50,28 @@
 
     <p class="signature">Con todo lo que soy,<br><strong>Luis</strong></p>
 
+    <!-- Botón para la carta a mis suegros -->
+    <div style="text-align:center; margin-top: 30px;">
+      <a href="suegros.html" 
+         style="display: inline-block; background-color: #b76e79; color: white; padding: 12px 30px; border-radius: 25px; 
+                font-weight: 600; text-decoration: none; font-family: 'Montserrat', sans-serif; box-shadow: 0 4px 8px rgba(183,110,121,0.4);
+                transition: background-color 0.3s ease; cursor: pointer;">
+        Carta para mis segundos padres 💐
+      </a>
+    </div>
 
   <script>
-  function mostrarFoto(inputId, fotoId, claveCorrecta) {
-    const input = document.getElementById(inputId);
-    const contenedor = document.getElementById(fotoId);
-    if (input.value.trim().toLowerCase() === claveCorrecta.toLowerCase()) {
-      contenedor.style.display = "block";
-      input.disabled = true;
-    } else {
-      alert("Palabra incorrecta 💔");
+    function mostrarFoto(inputId, fotoId, claveCorrecta) {
+      const input = document.getElementById(inputId);
+      const contenedor = document.getElementById(fotoId);
+      if (input.value.trim().toLowerCase() === claveCorrecta.toLowerCase()) {
+        contenedor.style.display = "block";
+        input.disabled = true;
+      } else {
+        alert("Palabra incorrecta 💔");
+      }
     }
-  }
-</script>
+  </script>
+  </div>
 </body>
 </html>
